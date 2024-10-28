@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div Change color Width height</title>
+</head>
+<body>
+    
+    <h1 style="text-align: center;">Change color Width height</h1>
+<div style="text-align: center;" class="">
+<input type="text" placeholder="Color" id="color">
+<input type="text" placeholder="height" id="height">
+<input type="text" placeholder="Width" id="width">
+<button id="btn">Click Me</button>
+
+</div>
+<div id="changerDiv" style="width: 200px; height: 200px; border: 1px solid ; margin-top: 30px;margin-left: 200px;"></div>
+
+<script>
+    let color=document.getElementById('color')
+    let height=document.getElementById('height')
+    
+    let width=document.getElementById('width');
+    
+    let changerDiv =document.getElementById('changerDiv');
+    let btn=document.getElementById('btn')
+    btn.addEventListener('click',()=>{
+        let a1= Number(height.value);
+        let a2= Number(width.value);
+        changerDiv.style.backgroundColor=color.value
+        changerDiv.style.width=`${a2}px`
+        changerDiv.style.height=`${a1}px`
+    })
+</script>
+</body>
+</html>
